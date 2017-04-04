@@ -156,3 +156,47 @@ Javascriptde sert funksiyalari asagidakilardir:
    }
    console.log(a)//not defined
    </pre>
+   <br>
+   <b>14What is function hoisting in JavaScript?</b>
+   <br>
+   <pre>
+   Bizim kod browzer terefinden oxunanda ilk olara deyisenleri scopba undifined olaraq yazir ondan sonra funsiyalari oxuyaraq yazir . Deyisenler deyer verdiyimiz setir run olunana geder undifined olur , hemin setirden sonra ise verdiyimiz deyeri dasiyir
+   Bizim kodda funksiyalari, obyect ve ya deyisenleri cagirdigimiz yerler hoisting mentiqi gedir. Funksiyalar istenilen sutunda cagrildiginda isleyir amma deyisenler undifined olur . 
+   mis :
+   var a = 5;
+   b();// undifined
+   fubction b(){
+    console.log(c);
+   }
+   b()//undifined
+   var c = 10;
+   b();//10
+   </pre>
+   <br>
+   <b> 15.Can you name two programming paradigms important for JavaScript app developers?
+</b>
+<br>
+<pre>
+  JavaScript dili paradigma dillerinden scripting, object-oriented (prototype-based), imperative, functional istifade edir.
+    funksional paradigmani 16 - ci sualda aciqlamisam.
+    OOP(prototype - base) - javascriptde OOP istifadesi en cox prototyp mentiqinde hiss olunur . Bizim ozumuzun obyectimizi , classlarimizi yaradaraq bir biri ile elaqelendirmemiz rahatliqla basqa yerde istifade etmemiz OOP paradigmasinin esasinda olur.
+    Scripting - esas temeli script basdir. fayllara mudaxile ede bilmemeyi buradan ireli gelir . Standartlari ECMA standarti oldu bunun aciqlamasidir.
+    Imperativ - bu paradigma ise datatyp larla islemesi buna nianedir.
+</pre>
+   <br>
+   <b>16.What is functional programming? </b>
+   <br>
+   <pre>
+   Programlasdirma paradiqmalardan biride funksional paradiqmadir. Bu paradiqma demek olarki bututn programlawdiram dillerinde tetbiq olunur. 
+   kod tekrarini aradan qaldirmaq ucun funksiya yaziriq elazim olan yerde sadece cagiririq.
+   bu paradigmainin bize verdiyi rahatliqlar: 
+    Kodun oxunarligi.
+    Argumentlerin rahat istifadesi ve s.
+   mis:
+        function name(arg, arg1){
+          console.log(arg);
+          return arg1;
+        }
+   </pre>
+<br>
+  <b>
