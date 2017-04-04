@@ -1,4 +1,20 @@
 # 29.03.2017
+<b>2.What are closures and how are they used?</b>
+<br>
+Funksiyaya her hansi bir argument otururuk ve onun ve funksiyanin icinde birdenede funksiya aciriq  bu funksiya  clouserin mentiqidir.  Bu xususiyyet obyeklerede aitdir;
+<pre>
+var a=10; // qlobal deyisen
+function first(b){
+var a =4;//local deyisen
+  return function second(c){
+  a+=b;
+  console.log(a);
+  
+  }
+  a++
+}
+first(second(5));
+</pre>
 <b>3.Can you use x === “object” to test if x is an object?</b>
 Bu sualin cavabi qisa olaraq olmazdir. 
 Bunu test etək ücun bir x obyekti yaradiriq və muqaise edirik.
@@ -88,6 +104,55 @@ function(){
   
  </pre>
  <br>
- <b>Which conditional statements will JavaScript support?
+ <b>10.Which conditional statements will JavaScript support?
 </b>
-
+<br>
+<pre>
+Javascriptde sert funksiyalari asagidakilardir:
+  1. if-> if(sert){ emlyat} -> eger sert truedirse emeliyyet icra olunur eks halda ise uzerinden kecilir.
+  2. else if-> else if(sert){ emliyyat} -> bezen bize bir nece dene sert vermeli oluruq bu zaman birinci ifden sonra else if isledilir.
+  3.else-> else{emeliyyat} -> elsden qabaq gelen ifin(iflerin) serti odenilmedikde elsde olan emeliyyat icra olunur.
+  4. switch case ->
+  switch(argument){
+    case 0: emelyat;
+    break;
+    case 1: emelyat1;
+    break;
+    case 2: emelyat2;
+    break;
+    case 3: emelyat3;
+    } -> 
+   Bu operotor argunti yoxlayir ve argumente gore casede olan emeliyyati icra edir;
+   </pre>
+   <br>
+   <b> 11.What is NaN</b>
+   <br>
+   <pre>
+    mueyyen riyazi emelyatlar icra oluna bilmedikde NaN deyeri qaytarir. sonsuzlugada ise infinity
+    buna misal olaraq edein 0 a bolunmesinden NaN 
+    strin ve namber uzerinde riyazi emelyatlar icra etdikde NaN deyeri qaytarir;
+    "a"/2;//NaN
+    3/00 ;//infinity
+    
+   </pre>
+   <br>
+   <b> 12.Explain the meaning of the keyword ‘this’ in JavaScript functions</b>
+   <br>
+   <pre>
+   this keywordu funksiyanin yerini gosterir. bizim buyun kodlarimiz window objectinde oldugu ucun funksiyanin icinde yazanda window obyectinin icinde funksiyaya aid olan propertyleri cixardir.
+   event funksiyalarinda click olunan obyecti qaytari.
+   </pre>
+   <br>
+   <b> 13.What is the difference between undefined and not defined in JavaScript?</b>
+   <br>
+   <pre>
+   Undifined - deyisen teyin olunub amma hec bir deyer verilmiyib. Bu barede 9 - cu sualda etrafliaciqlama vermisem.
+   Not defined - umumiyyetce teyin etmediyimiz bir deyisen var ve onu istifade edirik.
+   Buna misal: 
+   Tutaqki bizim proyektimizde a dan hec bir yerde istifade etmemisik ve her hardasa lokal deyisendir biz bunu cagirdigimizda qarsimiza eror cixacaq. Bu hadisenin bas vermesi note difaint adlanir yeni scope de teyin olunmuyub 
+   fuction myFun(){ 
+   var a =;
+   console.log(a);//undifined 
+   }
+   console.log(a)//not defined
+   </pre>
