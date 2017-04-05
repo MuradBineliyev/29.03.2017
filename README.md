@@ -1,4 +1,30 @@
 # 29.03.2017
+<b>1.Describe an instance of prototypal inheritance in JavaScript?
+</b>
+<pre>
+function Dog() {
+}
+Dog.prototype.bark = function() {
+ console.log(‘woof!’);
+};
+var fido = new Dog();
+fido.bark(); // ‘woof!’
+
+Bu misalda fido-nun bark adlanan bir metodu yoxdur. Lakin, new decleration-u vasitəsilə burada prototype chain yaranır. Fido.bark() yazdıqda isə JS fido-da bark metodun axtarmır, onu Dog funksiyasından götürür.
+Real olaraq, belə bir funksiya yazaraq yuxaırda göstərilənləri aydınlaşdırmaq olar:
+Function Rectangle(width, height
+){
+this.width=width;
+this.height=height;
+}
+Var rect = new Rectangle(3,4);
+Rectangle.prototype.area = function(){
+Return.this.width*this.height
+};
+Rect.area()//12
+Burda baş verənləri aydınlaşdırsaq, Rectangle adında bir konstruktor funksiyamız var, və onun 2arqumenti var, this. deklarasiyası ilə arqumentləri götürüb yeni width, height properity-lər yaradırıq ki, bu da bizə sonradan prototype vasitəsilə bunlardan istifaəd edərək yeni object yaratmağa imkan verir. This decleration-u bizə imkan verir ki, bizə lazım olan arqumentləri götürüb istifadə edə bilək, və iki funksiya arasında əlaqə yaradır. Prototype-a baxsaq burada return görərəik ki, bu da konstruktor funksiyadakı this vasitəsilə gpötürdüyümüz arqumentləri bizə qaytarır.
+</pre>
+<br>
 <b>2.What are closures and how are they used?</b>
 <br>
 Funksiyaya her hansi bir argument otururuk ve onun ve funksiyanin icinde birdenede funksiya aciriq  bu funksiya  clouserin mentiqidir.  Bu xususiyyet obyeklerede aitdir;
@@ -199,4 +225,8 @@ Javascriptde sert funksiyalari asagidakilardir:
         }
    </pre>
 <br>
-  <b>
+ <b>16.What is the difference between classical inheritance and prototypal inheritance?
+</b>
+<pre>
+
+</pre>
